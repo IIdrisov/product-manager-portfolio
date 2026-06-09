@@ -2,7 +2,13 @@ import { ArrowRight } from "lucide-react";
 import { LetsTalkIcon } from "@/components/LetsTalkIcon";
 import { cn } from "@/lib/utils";
 
-type ButtonVariant = "ghost" | "primary" | "outline" | "white" | "status";
+type ButtonVariant =
+  | "ghost"
+  | "primary"
+  | "outline"
+  | "white"
+  | "whiteCta"
+  | "status";
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: ButtonVariant;
@@ -20,6 +26,8 @@ const variants: Record<ButtonVariant, string> = {
     "border-2 border-white/40 hover:bg-white/10 text-white font-inter-tight px-4 md:px-6 h-10 md:h-auto py-3 rounded-full text-base gap-2",
   white:
     "bg-white text-primary hover:bg-white/80 px-4 pl-1 md:pl-2 md:pr-5 h-9 md:h-auto py-3 rounded-full text-base gap-2",
+  whiteCta:
+    "bg-white text-primary hover:bg-white/80 h-16 min-h-16 gap-2 rounded-full px-8 py-3 text-xl font-inter-tight",
   status:
     "bg-background text-primary px-4 md:px-6 h-10 md:h-auto py-3 rounded-full text-base gap-2 hover:bg-[#03F172] md:hover:bg-transparent",
 };

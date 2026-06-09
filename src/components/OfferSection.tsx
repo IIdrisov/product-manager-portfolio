@@ -1,6 +1,6 @@
 import { offers, siteConfig } from "@/data/site";
 import { Button } from "@/components/ui/Button";
-import { cn } from "@/lib/utils";
+import { cn, letsTalkCtaClassName } from "@/lib/utils";
 
 function OfferStatus({
   available,
@@ -111,9 +111,9 @@ export function OfferSection() {
                 className="mt-auto w-fit"
               >
                 <Button
-                  variant={isLight ? "primary" : "white"}
+                  variant={isLight ? "primary" : "whiteCta"}
                   showLetsTalkIcon
-                  className="h-16 px-8 text-xl font-inter-tight"
+                  className={letsTalkCtaClassName}
                 >
                   Let&apos;s talk
                 </Button>

@@ -1,6 +1,7 @@
 import { footerAboutParagraphs, siteConfig, socialLinks } from "@/data/site";
 import { Avatar } from "@/components/Avatar";
 import { Button } from "@/components/ui/Button";
+import { letsTalkCtaClassName } from "@/lib/utils";
 
 export function Footer() {
   return (
@@ -43,9 +44,9 @@ export function Footer() {
             className="w-fit"
           >
             <Button
-              variant="white"
+              variant="whiteCta"
               showLetsTalkIcon
-              className="h-16 w-fit px-8 text-xl font-inter-tight"
+              className={letsTalkCtaClassName}
             >
               Let&apos;s talk
             </Button>
