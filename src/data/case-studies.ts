@@ -53,8 +53,34 @@ export const caseStudies: CaseStudy[] = [
     result:
       "MVP in 3 months. Revenue from $0 to $300K+ MRR within 3 months after launch. LTV +300%. Organic promotion from Web3 influencers, including Anatoly Yakovenko (Solana).",
     media: [
-      { type: "video", src: "/videos/xplace-crypto-card.mp4" },
-      ...placeholderMedia(3),
+      {
+        type: "image",
+        src: "/images/main-xplace.webp",
+        alt: "XPlace main screen",
+        width: 3272,
+        height: 5138,
+      },
+      {
+        type: "image",
+        src: "/images/select-card-xplace.webp",
+        alt: "XPlace card selection",
+        width: 3240,
+        height: 1624,
+      },
+      {
+        type: "image",
+        src: "/images/select-card-info-xplace.webp",
+        alt: "XPlace card details",
+        width: 3240,
+        height: 5678,
+      },
+      {
+        type: "image",
+        src: "/images/bank-account-xplace.webp",
+        alt: "XPlace bank account",
+        width: 2426,
+        height: 1656,
+      },
     ],
   },
   {
