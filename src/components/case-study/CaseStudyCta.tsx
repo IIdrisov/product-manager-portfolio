@@ -1,4 +1,3 @@
-import { ArrowRight } from "lucide-react";
 import { siteConfig } from "@/data/site";
 import { Button } from "@/components/ui/Button";
 
@@ -15,9 +14,8 @@ export function CaseStudyCta() {
         Let&apos;s design the next one together
       </h2>
       <a href={siteConfig.telegram} target="_blank" rel="noopener noreferrer">
-        <Button variant="primary" className="group h-14 gap-2 px-8 text-lg">
+        <Button variant="primary" className="h-14 px-8 text-lg" showLetsTalkIcon>
           Let&apos;s talk
-          <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
         </Button>
       </a>
     </section>

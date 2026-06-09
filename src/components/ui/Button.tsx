@@ -1,3 +1,5 @@
+import { ArrowRight } from "lucide-react";
+import { LetsTalkIcon } from "@/components/LetsTalkIcon";
 import { cn } from "@/lib/utils";
 
 type ButtonVariant = "ghost" | "primary" | "outline" | "white" | "status";
@@ -5,6 +7,8 @@ type ButtonVariant = "ghost" | "primary" | "outline" | "white" | "status";
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: ButtonVariant;
   asChild?: boolean;
+  showArrow?: boolean;
+  showLetsTalkIcon?: boolean;
 }
 
 const variants: Record<ButtonVariant, string> = {
@@ -23,6 +27,8 @@ const variants: Record<ButtonVariant, string> = {
 export function Button({
   className,
   variant = "ghost",
+  showArrow = false,
+  showLetsTalkIcon = false,
   children,
   ...props
 }: ButtonProps) {
@@ -30,12 +36,20 @@ export function Button({
     <button
       className={cn(
         "inline-flex items-center justify-center whitespace-nowrap transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/20 disabled:pointer-events-none disabled:opacity-50",
+        (showArrow || showLetsTalkIcon) && "group gap-2",
         variants[variant],
         className,
       )}
       {...props}
     >
+      {showLetsTalkIcon && <LetsTalkIcon />}
       {children}
+      {showLetsTalkIcon && (
+        <ArrowRight className="h-4 w-4 shrink-0 transition-transform duration-300 group-hover:translate-x-1" />
+      )}
+      {showArrow && !showLetsTalkIcon && (
+        <ArrowRight className="h-4 w-4 shrink-0 transition-transform duration-300 group-hover:translate-x-1" />
+      )}
     </button>
   );
 }

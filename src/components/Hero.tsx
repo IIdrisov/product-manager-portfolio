@@ -1,7 +1,6 @@
 "use client";
 
 import { companies, siteConfig } from "@/data/site";
-import { Avatar } from "@/components/Avatar";
 import { Button } from "@/components/ui/Button";
 
 export function Hero() {
@@ -39,8 +38,11 @@ export function Hero() {
               rel="noopener noreferrer"
               className="inline"
             >
-              <Button variant="white" className="mx-1 inline-flex align-middle gap-2 pl-2 pr-4">
-                <Avatar size="sm" />
+              <Button
+                variant="white"
+                className="mx-1 inline-flex align-middle px-4"
+                showLetsTalkIcon
+              >
                 Let&apos;s talk
               </Button>
             </a>{" "}

@@ -42,13 +42,13 @@ body {
   background: linear-gradient(
     135deg,
     #050505 0%,
-    #0a1628 25%,
-    #1a0a2e 50%,
-    #0a2818 75%,
+    #0a1628 20%,
+    #0f2d5c 45%,
+    #1a3a6e 70%,
     #050505 100%
   );
   background-size: 400% 400%;
-  animation: gradient-shift 15s ease infinite;
+  animation: gradient-shift 8s ease infinite;
 }
 
 @keyframes ping-slow {

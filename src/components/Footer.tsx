@@ -1,11 +1,10 @@
-import { ArrowRight } from "lucide-react";
-import { siteConfig, socialLinks } from "@/data/site";
+import { footerAboutParagraphs, siteConfig, socialLinks } from "@/data/site";
 import { Avatar } from "@/components/Avatar";
 import { Button } from "@/components/ui/Button";
 
 export function Footer() {
   return (
-    <footer className="w-full border-t border-black/5">
+    <footer className="w-full">
       <section className="mx-auto grid w-full max-w-[1400px] grid-cols-1 gap-4 px-4 py-16 sm:grid-cols-2 sm:px-6 lg:gap-5 lg:py-24">
         {socialLinks.map((link) => (
           <a
@@ -24,28 +23,35 @@ export function Footer() {
         ))}
       </section>
 
-      <section className="mx-auto flex w-full max-w-[1400px] flex-col items-start justify-between gap-8 px-4 pb-24 sm:px-6 lg:flex-row lg:items-center">
-        <div className="max-w-xl">
+      <section className="relative flex w-full justify-center px-6 py-16 lg:py-20">
+        <section className="z-40 flex w-5/6 max-w-[560px] rotate-[7deg] flex-col gap-6 rounded-[44px] border-4 border-white/15 bg-[#050505] p-6 xl:p-12">
           <Avatar size="lg" />
-          <p className="mt-4 text-base leading-relaxed text-secondary">
-            Hi, I&apos;m {siteConfig.name}. 6+ years designing fintech, crypto and
-            consumer products. I don&apos;t like overcomplicating, long shipping
-            cycles, or weak UX. Biased toward speed, quality, and measurable
-            impact.
-          </p>
-        </div>
-
-        <a href={siteConfig.telegram} target="_blank" rel="noopener noreferrer">
-          <Button variant="primary" className="group">
-            Let&apos;s talk
-            <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-          </Button>
-        </a>
+          <div className="text-base text-white xl:text-xl">
+            {footerAboutParagraphs.map((paragraph) => (
+              <p
+                key={paragraph}
+                className="mb-4 font-inter-tight leading-[1.4em] last:mb-0"
+              >
+                {paragraph}
+              </p>
+            ))}
+          </div>
+          <a
+            href={siteConfig.telegram}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-fit"
+          >
+            <Button
+              variant="white"
+              showLetsTalkIcon
+              className="h-16 w-fit px-8 text-xl font-inter-tight"
+            >
+              Let&apos;s talk
+            </Button>
+          </a>
+        </section>
       </section>
-
-      <p className="border-t border-black/5 py-6 text-center text-sm text-secondary">
-        Built with Next.js + Tailwind. Not Framer.
-      </p>
     </footer>
   );
 }

@@ -241,49 +241,84 @@ export const experiences = [
   },
 ];
 
-export const valueProps = [
+export type ValuePropCategory =
+  | "Business Value"
+  | "Product Development"
+  | "Product Discovery";
+
+export type ValuePropIcon =
+  | "zap"
+  | "target"
+  | "chart"
+  | "layers"
+  | "code"
+  | "pencil-ruler"
+  | "lightbulb"
+  | "palette"
+  | "users";
+
+export const valuePropCategoryColors: Record<ValuePropCategory, string> = {
+  "Business Value": "bg-[#029F4B]",
+  "Product Development": "bg-[#036AEF]",
+  "Product Discovery": "bg-[#6E55FF]",
+};
+
+export const valueProps: Array<{
+  category: ValuePropCategory;
+  icon: ValuePropIcon;
+  title: string;
+}> = [
   {
     category: "Business Value",
+    icon: "zap",
     title:
       "Accelerating product growth through data-driven design with measurable impact on conversion and retention.",
   },
   {
     category: "Business Value",
+    icon: "target",
     title:
       "Building competitive advantage through high-quality UX in fintech, crypto and payments.",
   },
   {
     category: "Business Value",
+    icon: "chart",
     title:
       "Reducing launch risk through fast hypothesis validation — JTBD, A/B tests, prototypes.",
   },
   {
     category: "Product Development",
+    icon: "layers",
     title:
       "Speeding up delivery with clear design specs, states and edge cases in Figma.",
   },
   {
     category: "Product Development",
+    icon: "code",
     title:
       "Prototyping interactive flows for fast validation before development.",
   },
   {
     category: "Product Development",
+    icon: "pencil-ruler",
     title:
       "Securing quality through design reviews during development.",
   },
   {
     category: "Product Discovery",
+    icon: "lightbulb",
     title:
       "Shaping product vision based on research, CJM and unit economics.",
   },
   {
     category: "Product Discovery",
+    icon: "palette",
     title:
       "Providing clarity on next steps through funnel analytics and UX recommendations.",
   },
   {
     category: "Product Discovery",
+    icon: "users",
     title:
       "Aligning teams through workshops and cross-functional collaboration.",
   },
@@ -292,28 +327,32 @@ export const valueProps = [
 export const offers = [
   {
     available: true,
+    theme: "light" as const,
     title: "Project",
     description: "I'll structure and design your product end-to-end.",
     price: "from $5,000",
     priceNote: "net starting price",
     features: [
-      "Freelance / contract",
+      "Freelance Consultant role",
       "Flexible commitment",
       "Remote",
       "Worldwide",
+      "Not satisfied with the results? I will refund you 100%, and no questions asked.",
     ],
   },
   {
     available: true,
+    theme: "dark" as const,
     title: "Full-time",
     description: "I join your team as Senior Product Designer.",
-    price: "from $3,500",
+    price: "from $4,000",
     priceNote: "net per month",
     features: [
-      "Senior / Lead Designer",
+      "Senior / Lead Designer role",
       "Minimum 6 months",
       "Remote or hybrid",
       "Fintech · Crypto · Web3",
+      "Not satisfied with the results? We will cancel the contract prior to the full term. Hassle-free.",
     ],
   },
 ];
@@ -343,20 +382,11 @@ export const testimonials = [
 ];
 
 export const manifestoParagraphs = [
-  "Over the last six years, I've worked across fintech, crypto, payments, marketplaces, and consumer products. From crypto exchanges and wallets to neobanks, staking products, loyalty ecosystems, and internal platforms, one thing has remained constant: successful products are rarely built by following assumptions.",
-  "I believe great products start with understanding real user problems.",
-  "Too many teams begin with solutions. They become attached to ideas, features, or technologies before validating whether anyone actually needs them. Throughout my career, the most impactful products I've worked on came from challenging initial assumptions and digging deeper into customer behavior.",
-  "At XPlace, what started as a traditional crypto card evolved into a completely different product after research revealed that users weren't looking for another way to spend crypto. They were looking for a way to spend without selling their assets. That insight ultimately led to the creation of a crypto-backed credit card product and a business that scaled to $300K+ MRR.",
-  "I believe speed is a competitive advantage.",
-  "The goal is not to ship fast for the sake of shipping fast. The goal is to learn faster than everyone else. The sooner users interact with a product, the sooner we discover whether we're solving the right problem.",
-  "Design should not be a bottleneck that delays learning. Design should accelerate learning through prototypes, experiments, user interviews, and rapid iterations. I prefer launching an imperfect solution that teaches us something valuable over spending months polishing assumptions that may turn out to be wrong.",
-  "I also believe that product design sits at the intersection of user needs, business goals, and technical reality.",
-  "The best designers don't just create beautiful interfaces. They understand business models, growth loops, monetization, retention mechanics, and technical constraints. Design decisions have business consequences, and the strongest products emerge when design is treated as a strategic function rather than a delivery function.",
-  "Finally, I believe great products are built collaboratively.",
-  "The most successful teams I've worked with were never driven by a single person. They were built on trust, transparency, and constant collaboration between designers, product managers, engineers, analysts, and stakeholders.",
-  "My role as a designer is often to create clarity: turning ideas into prototypes, aligning teams around a shared vision, and helping everyone move faster toward the same goal.",
-  "Technology changes quickly. User expectations change even faster.",
-  "The designers who create meaningful products will be those who stay curious, challenge assumptions, validate relentlessly, and never lose sight of the people they are building for.",
+  "Over the last six years, I've worked across fintech, crypto, payments, and consumer products. One thing has remained constant: successful products are rarely built by following assumptions.",
+  "I believe great products start with understanding real user problems. Too many teams fall in love with solutions before validating whether anyone actually needs them. The most impactful products I've worked on came from challenging initial ideas and digging deeper into customer behavior.",
+  "I believe speed is a competitive advantage. The goal is not to ship fast for the sake of shipping fast, but to learn faster than everyone else. The sooner users interact with a product, the sooner we discover whether we're solving the right problem. Design should accelerate learning through prototypes, experiments, user interviews, and rapid iterations.",
+  "I also believe that product design sits at the intersection of user needs, business goals, and technical reality. The best products emerge when design is treated as a strategic function that helps shape outcomes, not just interfaces.",
+  "Finally, I believe great products are built collaboratively. My role as a designer is often to create clarity: turning ideas into prototypes, aligning teams around a shared vision, and helping everyone move faster toward the same goal.",
 ];
 
 export type FaqCategory = "Offer" | "Collaboration" | "Contact";
@@ -414,6 +444,11 @@ export const faqItems: Array<{
     answer:
       "Telegram or email. I typically respond within 24 hours.",
   },
+];
+
+export const footerAboutParagraphs = [
+  "Hi, I'm Ivan. With 6+ years of experience, I help build products in fintech, crypto, and consumer tech. I don't like overcomplicating, long shipping cycles, or lousy design.",
+  "I'm biased toward speed, quality, and measurable impact. If you need this at this stage of your product, then don't hesitate—let's talk about how I can help you.",
 ];
 
 export const socialLinks = [

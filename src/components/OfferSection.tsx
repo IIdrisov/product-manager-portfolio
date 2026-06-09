@@ -1,65 +1,126 @@
-import { ArrowRight } from "lucide-react";
 import { offers, siteConfig } from "@/data/site";
 import { Button } from "@/components/ui/Button";
+import { cn } from "@/lib/utils";
+
+function OfferStatus({
+  available,
+  theme,
+}: {
+  available: boolean;
+  theme: "light" | "dark";
+}) {
+  return (
+    <div
+      className={cn(
+        "inline-flex h-6 w-fit items-center gap-2 rounded-full px-3 py-0.5 text-sm xl:h-8 xl:text-base",
+        theme === "light"
+          ? "border border-primary/10 bg-white text-primary"
+          : "border border-white bg-transparent text-white",
+      )}
+    >
+      <span className="relative flex h-2 w-2">
+        {available && (
+          <span
+            className={cn(
+              "absolute h-2 w-2 rounded-full opacity-75 animate-ping",
+              available ? "bg-[#03F172]" : "bg-red-500",
+            )}
+          />
+        )}
+        <span
+          className={cn(
+            "relative h-2 w-2 rounded-full",
+            available ? "bg-[#03F172]" : "bg-red-500",
+          )}
+        />
+      </span>
+      {available ? "Available" : "Not available"}
+    </div>
+  );
+}
 
 export function OfferSection() {
   return (
     <section
       id="offer"
-      className="w-full max-w-[1400px] px-4 py-16 sm:px-6 lg:py-24"
+      className="grid w-full max-w-[2000px] grid-cols-1 gap-6 p-0 px-3 py-12 xl:px-3 xl:py-40"
     >
-      <ul className="grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-5">
-        {offers.map((offer) => (
-          <li
-            key={offer.title}
-            className="flex flex-col rounded-3xl border-2 border-black/5 bg-[#050505] p-6 text-white sm:p-8 lg:rounded-4xl lg:p-10"
-          >
-            <div className="mb-6 flex items-center gap-3">
-              <span
-                className={`h-2 w-2 rounded-full ${offer.available ? "bg-[#03F172]" : "bg-red-500"}`}
-              />
-              <span className="text-sm text-white/60">
-                {offer.available ? "Available" : "Not available"}
-              </span>
-            </div>
+      <ul className="grid grid-cols-1 gap-6 lg:grid-cols-2">
+        {offers.map((offer) => {
+          const isLight = offer.theme === "light";
 
-            <h2 className="font-inter-tight text-3xl font-medium sm:text-4xl">
-              {offer.title}
-            </h2>
-            <p className="mt-3 text-base text-white/70">{offer.description}</p>
-
-            <div className="my-8">
-              <p className="font-inter-tight text-4xl font-medium sm:text-5xl">
-                {offer.price}
-              </p>
-              <p className="mt-1 text-sm text-white/50">{offer.priceNote}</p>
-            </div>
-
-            <ul className="mb-8 space-y-2 text-base text-white/80">
-              {offer.features.map((feature) => (
-                <li key={feature} className="flex items-center gap-2">
-                  <span className="h-1 w-1 rounded-full bg-white/50" />
-                  {feature}
-                </li>
-              ))}
-            </ul>
-
-            <a
-              href={siteConfig.telegram}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-auto"
+          return (
+            <li
+              key={offer.title}
+              className={cn(
+                "flex flex-col gap-8 rounded-[44px] border-4 px-6 py-12 font-inter-tight text-base xl:gap-10 xl:p-16 xl:text-xl",
+                isLight
+                  ? "border-primary/[1%] bg-[#F4F4F7] text-primary"
+                  : "border-white/15 bg-[#050505] text-white",
+              )}
             >
-              <Button
-                variant="white"
-                className="group w-full justify-center sm:w-auto"
+              <div className="flex flex-col gap-4">
+                <OfferStatus available={offer.available} theme={offer.theme} />
+                <div className="flex flex-col gap-3">
+                  <h2 className="font-inter-tight text-4xl font-medium tracking-[-0.02em] xl:text-5xl">
+                    {offer.title}
+                  </h2>
+                  <p>{offer.description}</p>
+                </div>
+              </div>
+
+              <div className="flex flex-col lg:flex-row lg:items-end lg:gap-2">
+                <h3 className="font-inter-tight text-6xl font-medium xl:text-7xl">
+                  {offer.price}
+                </h3>
+                <span
+                  className={cn(
+                    "mt-2 text-base",
+                    isLight ? "text-secondary" : "text-white/60",
+                  )}
+                >
+                  {offer.priceNote}
+                </span>
+              </div>
+
+              <ul
+                className={cn(
+                  "flex flex-col gap-3 lg:gap-4",
+                  isLight ? "text-secondary" : "text-white/60",
+                )}
               >
-                Let&apos;s talk
-                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </Button>
-            </a>
-          </li>
-        ))}
+                {offer.features.map((feature, index) => (
+                  <li key={feature} className="list-none p-0">
+                    {index > 0 && (
+                      <div
+                        className={cn(
+                          "mb-3 h-px w-full lg:mb-4",
+                          isLight ? "bg-secondary/40" : "bg-white/20",
+                        )}
+                      />
+                    )}
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+
+              <a
+                href={siteConfig.telegram}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-auto w-fit"
+              >
+                <Button
+                  variant={isLight ? "primary" : "white"}
+                  showLetsTalkIcon
+                  className="h-16 px-8 text-xl font-inter-tight"
+                >
+                  Let&apos;s talk
+                </Button>
+              </a>
+            </li>
+          );
+        })}
       </ul>
     </section>
   );

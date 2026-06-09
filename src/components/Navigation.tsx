@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
 import { navItems, siteConfig } from "@/data/site";
 import { Avatar } from "@/components/Avatar";
 import { Button } from "@/components/ui/Button";
@@ -50,9 +49,8 @@ export function Navigation() {
         rel="noopener noreferrer"
         className="shrink-0"
       >
-        <Button variant="primary" className="group flex gap-1 pr-3 sm:pr-4">
+        <Button variant="primary" className="pr-3 sm:pr-4" showLetsTalkIcon>
           Let&apos;s talk
-          <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
         </Button>
       </a>
     </nav>
