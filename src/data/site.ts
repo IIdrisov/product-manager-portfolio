@@ -58,14 +58,14 @@ export const projects = [
     image: "/images/tonhub.png",
     imageOverlay: "light",
   },
-  {
-    slug: "berizaryad-map",
-    title: "Map clustering & rental funnel",
-    subtitle: "Beri Zariad",
-    gradient: "from-slate-800 via-zinc-700 to-stone-600",
-    image: "/images/berizaryad.png",
-    imageOverlay: "light",
-  },
+  // {
+  //   slug: "berizaryad-map",
+  //   title: "Map clustering & rental funnel",
+  //   subtitle: "Beri Zariad",
+  //   gradient: "from-slate-800 via-zinc-700 to-stone-600",
+  //   image: "/images/berizaryad.png",
+  //   imageOverlay: "light",
+  // },
   {
     slug: "safesound-telegram",
     title: "Telegram music streaming mini-app",
@@ -178,26 +178,26 @@ export const experiences = [
     ],
     link: "#",
   },
-  {
-    company: "Beri Zariad",
-    period: "2023",
-    role: "Product Designer",
-    employment: "Full-time",
-    team: "Power Bank Rental · Product Squad · 6 members",
-    projects: [
-      {
-        name: "Map Clustering",
-        description: "Traffic −40%, conversion +15% for low-battery users.",
-      },
-    ],
-    scope: [
-      "JTBD Research",
-      "UI Design",
-      "A/B Testing",
-      "Payment UX",
-    ],
-    link: "https://berizaryad.ru",
-  },
+  // {
+  //   company: "Beri Zariad",
+  //   period: "2023",
+  //   role: "Product Designer",
+  //   employment: "Full-time",
+  //   team: "Power Bank Rental · Product Squad · 6 members",
+  //   projects: [
+  //     {
+  //       name: "Map Clustering",
+  //       description: "Traffic −40%, conversion +15% for low-battery users.",
+  //     },
+  //   ],
+  //   scope: [
+  //     "JTBD Research",
+  //     "UI Design",
+  //     "A/B Testing",
+  //     "Payment UX",
+  //   ],
+  //   link: "https://berizaryad.ru",
+  // },
   {
     company: "Whales",
     period: "2022 — 2023",

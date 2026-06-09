@@ -123,7 +123,7 @@ Crypto-биржа для intraday-трейдинга на 5 блокчейнах
 
 ---
 
-### БЕРИЗАРЯД! — Аренда power bank
+<!-- ### БЕРИЗАРЯД! — Аренда power bank
 **Product Designer**  
 *04/2023 — 07/2023 · Москва*
 
@@ -143,7 +143,7 @@ Crypto-биржа для intraday-трейдинга на 5 блокчейнах
 - Разработал in-app систему рейтингов и отзывов — увеличил объём actionable feedback в 3 раза.
 - Спроектировал UX интеграции СБП и альтернативных payment providers — снижение транзакционных издержек на 25%.
 
----
+--- -->
 
 ### Whales (TonWhales) — TON Ecosystem
 **Product Designer**  

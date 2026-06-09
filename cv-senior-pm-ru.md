@@ -65,7 +65,7 @@ Senior Product Manager с 5+ годами опыта в создании fintech
 
 ---
 
-### Product Manager
+<!-- ### Product Manager
 **Beri Zariad** — Сервис аренды power bank  
 *12/2023 — 05/2024*
 
@@ -79,7 +79,7 @@ Senior Product Manager с 5+ годами опыта в создании fintech
 - Внедрил in-app систему feedback и рейтингов для улучшения сбора customer insights — объём actionable feedback вырос в 3 раза.
 - Выявил возможность улучшить unit economics через оптимизацию payment infrastructure и провёл интеграцию СБП — снижение транзакционных издержек на 25%.
 
----
+--- -->
 
 ### Product Manager
 **Whales** — Web3-продукты  

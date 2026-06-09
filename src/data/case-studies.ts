@@ -107,8 +107,27 @@ export const caseStudies: CaseStudy[] = [
     result:
       "Registration → First Trade conversion: 5.6% → 11.2% (+100%). Trading volume: $6M → $55M (+900%). Market share: 0.7% → 2.3%. Active traders: 10.5% → 24.5%. 7-day retention: 23% → 35%.",
     media: [
-      { type: "video", src: "/videos/alpha-one-bugatti.m4v" },
-      ...placeholderMedia(3),
+      {
+        type: "image",
+        src: "/images/alpha-main.webp",
+        alt: "Alpha One main screen",
+        width: 3416,
+        height: 2332,
+      },
+      {
+        type: "image",
+        src: "/images/alpha-second.webp",
+        alt: "Alpha One onboarding flow",
+        width: 2848,
+        height: 1304,
+      },
+      {
+        type: "image",
+        src: "/images/alpha-third.webp",
+        alt: "Alpha One first-trade insurance",
+        width: 3818,
+        height: 6574,
+      },
     ],
   },
   {
@@ -198,37 +217,57 @@ export const caseStudies: CaseStudy[] = [
     result:
       "TVL ~$100M. Wallet scaled to 60K MAU. Liquid staking retention +~20%. Transfer costs −30–50%. Real-world spending from crypto balances via Visa card.",
     media: [
-      { type: "image", src: "/images/tonhub.png", alt: "Tonhub wallet & card" },
-      ...placeholderMedia(3),
+      {
+        type: "image",
+        src: "/images/Tonhub-1.webp",
+        alt: "Tonhub wallet",
+        width: 9936,
+        height: 5120,
+      },
+      {
+        type: "image",
+        src: "/images/tonhub-2.webp",
+        alt: "Tonhub staking pools",
+        width: 4888,
+        height: 10400,
+        size: "half",
+      },
+      {
+        type: "image",
+        src: "/images/holders.webp",
+        alt: "Holders.io crypto card",
+        width: 2880,
+        height: 16383,
+      },
     ],
   },
-  {
-    slug: "berizaryad-map",
-    category: "Beri Zariad",
-    title: "Map clustering & rental funnel",
-    description:
-      "Optimizing map and rental funnel for a power bank sharing service.",
-    role: ["Product Designer"],
-    team: "Power Bank Rental · Product Squad · 6 members",
-    scope: [
-      "JTBD Research",
-      "UI Design",
-      "A/B Testing",
-      "Payment UX",
-      "Map Design",
-    ],
-    link: "https://berizaryad.ru",
-    problem:
-      "Users with critically low battery (<3%) couldn't find nearby stations on the map and abandoned the rental funnel. High mobile traffic consumption on the map made it worse.",
-    solution:
-      "Field research and JTBD interviews. Designed location clustering and map optimization logic. In-app feedback system. Payment UX for SBP and alternative providers. A/B and multivariate testing.",
-    result:
-      "Mobile traffic consumption −40%. Rental conversion +15% among low-battery users. Actionable feedback ×3. Transaction costs −25%.",
-    media: [
-      { type: "image", src: "/images/berizaryad.png", alt: "Beri Zariad" },
-      ...placeholderMedia(3),
-    ],
-  },
+  // {
+  //   slug: "berizaryad-map",
+  //   category: "Beri Zariad",
+  //   title: "Map clustering & rental funnel",
+  //   description:
+  //     "Optimizing map and rental funnel for a power bank sharing service.",
+  //   role: ["Product Designer"],
+  //   team: "Power Bank Rental · Product Squad · 6 members",
+  //   scope: [
+  //     "JTBD Research",
+  //     "UI Design",
+  //     "A/B Testing",
+  //     "Payment UX",
+  //     "Map Design",
+  //   ],
+  //   link: "https://berizaryad.ru",
+  //   problem:
+  //     "Users with critically low battery (<3%) couldn't find nearby stations on the map and abandoned the rental funnel. High mobile traffic consumption on the map made it worse.",
+  //   solution:
+  //     "Field research and JTBD interviews. Designed location clustering and map optimization logic. In-app feedback system. Payment UX for SBP and alternative providers. A/B and multivariate testing.",
+  //   result:
+  //     "Mobile traffic consumption −40%. Rental conversion +15% among low-battery users. Actionable feedback ×3. Transaction costs −25%.",
+  //   media: [
+  //     { type: "image", src: "/images/berizaryad.png", alt: "Beri Zariad" },
+  //     ...placeholderMedia(3),
+  //   ],
+  // },
   {
     slug: "safesound-telegram",
     category: "SafeSound",
@@ -251,8 +290,59 @@ export const caseStudies: CaseStudy[] = [
     result:
       "TOP-100 out of 3,000+ Telegram Hackathon projects. 100K+ MAU through organic distribution. Tier-1 investor interest, Seed round initiated.",
     media: [
-      { type: "image", src: "/images/safesound.png", alt: "SafeSound" },
-      ...placeholderMedia(3),
+      {
+        type: "image",
+        src: "/images/main-0.webp",
+        alt: "SafeSound main screen",
+        width: 8204,
+        height: 3312,
+      },
+      {
+        type: "image",
+        src: "/images/main-1.webp",
+        alt: "SafeSound player",
+        width: 3224,
+        height: 5448,
+        size: "half",
+      },
+      {
+        type: "image",
+        src: "/images/main-2.webp",
+        alt: "SafeSound catalog",
+        width: 3224,
+        height: 6996,
+        size: "half",
+      },
+      {
+        type: "image",
+        src: "/images/main-3.webp",
+        alt: "SafeSound search",
+        width: 6544,
+        height: 3852,
+      },
+      {
+        type: "image",
+        src: "/images/main-4.webp",
+        alt: "SafeSound playlists",
+        width: 8204,
+        height: 3312,
+      },
+      {
+        type: "image",
+        src: "/images/main-5.webp",
+        alt: "SafeSound sharing",
+        width: 3224,
+        height: 14530,
+        size: "half",
+      },
+      {
+        type: "image",
+        src: "/images/main-6.webp",
+        alt: "SafeSound viral mechanics",
+        width: 4884,
+        height: 4184,
+        size: "half",
+      },
     ],
   },
   {
