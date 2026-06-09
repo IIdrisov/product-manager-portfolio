@@ -2,47 +2,23 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useRef } from "react";
 import { projects } from "@/data/site";
+import { useVideoOnScroll } from "@/hooks/useVideoOnScroll";
 import { cn } from "@/lib/utils";
 
 function ProjectVideo({ src }: { src: string }) {
-  const cardRef = useRef<HTMLDivElement>(null);
-  const videoRef = useRef<HTMLVideoElement>(null);
-
-  useEffect(() => {
-    const card = cardRef.current;
-    const video = videoRef.current;
-    if (!card || !video) return;
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          void video.play().catch(() => {
-            // Autoplay may be blocked until user interaction
-          });
-        } else {
-          video.pause();
-          video.currentTime = 0;
-        }
-      },
-      { threshold: 0.25, rootMargin: "0px 0px -5% 0px" },
-    );
-
-    observer.observe(card);
-    return () => observer.disconnect();
-  }, []);
+  const { containerRef, videoRef } = useVideoOnScroll(0.1);
 
   return (
-    <div ref={cardRef} className="h-full w-full">
+    <div ref={containerRef} className="h-full w-full">
       <video
         ref={videoRef}
         src={src}
         muted
         loop
         playsInline
-        preload="metadata"
-        className="h-full w-full object-cover"
+        preload="auto"
+        className="pointer-events-none h-full w-full object-cover"
       />
     </div>
   );

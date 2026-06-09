@@ -13,7 +13,12 @@ export function Hero() {
           id="hero"
           className="hero-gradient relative flex items-center justify-center overflow-hidden rounded-b-4xl px-5 py-24 sm:px-6 sm:py-28 lg:flex-1 lg:rounded-4xl lg:p-24 xl:p-32 2xl:p-40"
         >
-          <h1 className="font-inter-tight z-20 max-w-[1080px] text-balance text-3xl font-medium leading-[1.2] tracking-[-0.01em] text-white sm:text-4xl md:text-5xl lg:-mt-6 lg:text-5xl lg:leading-[1.2] xl:text-7xl xl:leading-[1.1]">
+          <div className="hero-gradient-blobs" aria-hidden>
+            <span className="hero-blob-1" />
+            <span className="hero-blob-2" />
+            <span className="hero-blob-3" />
+          </div>
+          <h1 className="relative z-20 max-w-[1080px] text-balance font-inter-tight text-3xl font-medium leading-[1.2] tracking-[-0.01em] text-white sm:text-4xl md:text-5xl lg:-mt-6 lg:text-5xl lg:leading-[1.2] xl:text-7xl xl:leading-[1.1]">
             An{" "}
             <Button
               variant="status"
