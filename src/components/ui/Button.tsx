@@ -1,3 +1,5 @@
+"use client";
+
 import { ArrowRight } from "lucide-react";
 import { LetsTalkIcon } from "@/components/LetsTalkIcon";
 import { cn } from "@/lib/utils";

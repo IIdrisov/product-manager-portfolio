@@ -2,6 +2,9 @@ export type CaseStudyMedia = {
   type: "image" | "video";
   src?: string;
   alt?: string;
+  width?: number;
+  height?: number;
+  size?: "full" | "half";
 };
 
 export type CaseStudy = {
@@ -106,8 +109,44 @@ export const caseStudies: CaseStudy[] = [
     result:
       "Improved mobile performance and platform accessibility. Increased internal community engagement. Smoother cross-service workflows between HR services.",
     media: [
-      { type: "image", src: "/images/yandex-hrtech.png", alt: "Yandex HR Tech" },
-      ...placeholderMedia(3),
+      {
+        type: "image",
+        src: "/images/Feed.webp",
+        alt: "Yandex HR Tech news feed",
+        width: 4800,
+        height: 16300,
+      },
+      {
+        type: "image",
+        src: "/images/group-profile-yandex.webp",
+        alt: "Yandex HR Tech group profile",
+        width: 3488,
+        height: 3408,
+        size: "half",
+      },
+      {
+        type: "image",
+        src: "/images/group-info-yandex.webp",
+        alt: "Yandex HR Tech group info",
+        width: 3488,
+        height: 6984,
+        size: "half",
+      },
+      {
+        type: "image",
+        src: "/images/create-group-yandex.webp",
+        alt: "Yandex HR Tech create group",
+        width: 3488,
+        height: 7236,
+        size: "half",
+      },
+      {
+        type: "image",
+        src: "/images/treads-yandex.webp",
+        alt: "Yandex HR Tech threads",
+        width: 2888,
+        height: 16383,
+      },
     ],
   },
   {

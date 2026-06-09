@@ -1,6 +1,7 @@
 import { offers, siteConfig } from "@/data/site";
 import { Button } from "@/components/ui/Button";
-import { cn, letsTalkCtaClassName } from "@/lib/utils";
+import { letsTalkCtaClassName } from "@/lib/constants";
+import { cn } from "@/lib/utils";
 
 function OfferStatus({
   available,

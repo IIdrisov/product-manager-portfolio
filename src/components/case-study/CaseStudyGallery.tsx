@@ -16,7 +16,7 @@ function GalleryVideo({ src }: { src: string }) {
         loop
         playsInline
         preload="auto"
-        className="pointer-events-none max-h-[80vh] w-auto max-w-full rounded-2xl object-contain"
+        className="pointer-events-none max-h-[80vh] w-auto max-w-full rounded-[10px] object-contain"
       />
     </div>
   );
@@ -34,9 +34,15 @@ function MediaPlaceholder({ type, index }: { type: "image" | "video"; index: num
 }
 
 function GalleryItem({ media, index }: { media: CaseStudyMedia; index: number }) {
+  const isHalf = media.size === "half";
+
   return (
     <li className="flex items-center justify-center overflow-hidden rounded-[40px] border-none bg-surface p-8 lg:p-20">
-      <div className="relative flex h-full w-full max-w-[90vw] items-center justify-center">
+      <div
+        className={`relative flex h-full items-center justify-center ${
+          isHalf ? "w-1/2 max-w-[45vw]" : "w-full max-w-[90vw]"
+        }`}
+      >
         {media.src ? (
           media.type === "video" ? (
             <GalleryVideo src={media.src} />
@@ -44,10 +50,11 @@ function GalleryItem({ media, index }: { media: CaseStudyMedia; index: number })
             <Image
               src={media.src}
               alt={media.alt ?? `Case study media ${index + 1}`}
-              width={1880}
-              height={2000}
-              className="rounded-sm object-contain"
-              style={{ objectFit: "contain" }}
+              width={media.width ?? 1880}
+              height={media.height ?? 2000}
+              className="h-auto w-full max-w-full rounded-[10px] object-contain"
+              sizes={isHalf ? "(max-width: 768px) 45vw, 600px" : "(max-width: 768px) 90vw, 1200px"}
+              quality={100}
             />
           )
         ) : (

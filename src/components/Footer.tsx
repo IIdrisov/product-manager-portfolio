@@ -1,7 +1,7 @@
 import { footerAboutParagraphs, siteConfig, socialLinks } from "@/data/site";
 import { Avatar } from "@/components/Avatar";
 import { Button } from "@/components/ui/Button";
-import { letsTalkCtaClassName } from "@/lib/utils";
+import { letsTalkCtaClassName } from "@/lib/constants";
 
 export function Footer() {
   return (
