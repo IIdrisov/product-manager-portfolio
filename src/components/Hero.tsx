@@ -19,11 +19,11 @@ export function Hero() {
             <span className="hero-blob-3" />
           </div>
           <h1 className="relative z-20 max-w-[1080px] font-inter-tight text-3xl font-medium leading-[1.2] tracking-[-0.01em] text-white sm:text-4xl md:text-5xl lg:-mt-6 lg:text-5xl lg:leading-[1.2] xl:text-7xl xl:leading-[1.1]">
-            <span className="inline-flex flex-wrap items-center gap-x-2 gap-y-3">
+            <span className="inline-flex flex-wrap items-center gap-x-2 gap-y-2 align-middle">
               <span>An</span>
               <Button
                 variant="status"
-                className="inline-flex shrink-0 align-middle"
+                className="inline-flex shrink-0"
                 type="button"
               >
                 <span className="relative flex h-2 w-2">
@@ -36,27 +36,21 @@ export function Hero() {
                 </span>
                 {siteConfig.available ? "Available for work" : "Not available"}
               </Button>
-              <span>
-                experienced Product Designer with a bias for shipping, quality and
-                measurable impact.
-              </span>
-              <span className="inline-flex items-center gap-x-2">
-                <a
-                  href={siteConfig.telegram}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex shrink-0"
-                >
-                  <Button
-                    variant="white"
-                    className="px-4"
-                    showLetsTalkIcon
-                  >
-                    Let&apos;s talk
-                  </Button>
-                </a>
-                <span>about your product.</span>
-              </span>
+            </span>{" "}
+            experienced Product Designer with a bias for shipping, quality and
+            measurable impact.{" "}
+            <span className="block pt-2 sm:inline sm:pt-0">
+              <a
+                href={siteConfig.telegram}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex align-middle"
+              >
+                <Button variant="white" className="px-4" showLetsTalkIcon>
+                  Let&apos;s talk
+                </Button>
+              </a>{" "}
+              about your product.
             </span>
           </h1>
         </header>
