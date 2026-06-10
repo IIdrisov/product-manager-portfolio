@@ -37,8 +37,8 @@ export function Hero() {
                 {siteConfig.available ? "Available for work" : "Not available"}
               </Button>
             </span>{" "}
-            experienced Senior Product Manager with a bias for shipping, growth
-            and measurable business impact.{" "}
+            experienced Product Designer with a bias for shipping, quality and
+            measurable impact.{" "}
             <span className="block pt-2 sm:inline sm:pt-0">
               <a
                 href={siteConfig.telegram}

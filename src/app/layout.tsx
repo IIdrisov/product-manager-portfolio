@@ -15,9 +15,9 @@ const interTight = Inter_Tight({
 });
 
 export const metadata: Metadata = {
-  title: "Ivan Idrisov | Senior Product Manager",
+  title: "Ivan Idrisov | Product Designer",
   description:
-    "Senior Product Manager with 5+ years building fintech, crypto and payments products. $300K+ MRR neobank, $6M→$55M exchange volume. Ex-XPlace, Alpha One, Whales.",
+    "Senior Product Designer with experience in fintech, crypto and payments. Ex-Yandex, Alpha One, XPlace.",
 };
 
 export default function RootLayout({
