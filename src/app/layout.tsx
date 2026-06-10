@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Inter_Tight } from "next/font/google";
+import { YandexMetrika } from "@/components/YandexMetrika";
 import "./globals.css";
 
 const inter = Inter({
@@ -27,7 +28,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} ${interTight.variable}`}>
-      <body>{children}</body>
+      <body>
+        <YandexMetrika />
+        {children}
+      </body>
     </html>
   );
 }
