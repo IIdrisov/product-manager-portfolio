@@ -31,7 +31,6 @@ export const projects = [
     slug: "xplace-crypto-card",
     title: "Crypto-backed credit card",
     subtitle: "XPlace Neobank",
-    tag: "Case Study Soon",
     gradient: "from-emerald-900 via-teal-800 to-cyan-900",
     video: "/videos/xplace-crypto-card.mp4",
   },
@@ -104,7 +103,7 @@ export const experiences = [
       "Design Systems",
       "Product Management",
     ],
-    link: "https://xplace.com",
+    link: "https://x.place",
   },
   {
     company: "Alpha One",

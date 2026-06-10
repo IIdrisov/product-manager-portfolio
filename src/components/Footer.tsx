@@ -25,7 +25,7 @@ export function Footer() {
       </section>
 
       <section className="relative flex w-full justify-center px-6 py-16 lg:py-20">
-        <section className="z-40 flex w-5/6 max-w-[560px] rotate-[7deg] flex-col gap-6 rounded-[44px] border-4 border-white/15 bg-[#050505] p-6 xl:p-12">
+        <section className="z-40 flex w-5/6 max-w-[560px] rotate-[5deg] flex-col gap-6 rounded-[44px] border-4 border-white/15 bg-[#050505] p-6 xl:p-12">
           <Avatar size="lg" />
           <div className="text-base text-white xl:text-xl">
             {footerAboutParagraphs.map((paragraph) => (

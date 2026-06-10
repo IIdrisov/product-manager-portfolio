@@ -45,7 +45,7 @@ export const caseStudies: CaseStudy[] = [
       "User Testing",
       "Design Systems",
     ],
-    link: "https://xplace.com",
+    link: "https://x.place",
     problem:
       "Crypto-native users are forced to sell appreciating assets for fiat purchases — creating tax liabilities and reducing investment exposure. Traditional crypto cards lack differentiation due to market saturation.",
     solution:
@@ -368,8 +368,41 @@ export const caseStudies: CaseStudy[] = [
     result:
       "Referral conversion ×2. Fraud −50%. Program revenue: 120M → 540M ₽/year. Scaled to 5 partner universities.",
     media: [
-      { type: "image", src: "/images/synergy.png", alt: "Synergy Friends" },
-      ...placeholderMedia(3),
+      {
+        type: "image",
+        src: "/images/synergy-main.webp",
+        alt: "Synergy loyalty main screen",
+        width: 2880,
+        height: 7936,
+      },
+      {
+        type: "image",
+        src: "/images/synergy-second.webp",
+        alt: "Synergy referral flow",
+        width: 1338,
+        height: 818,
+      },
+      {
+        type: "image",
+        src: "/images/synergy-third.webp",
+        alt: "Synergy rewards catalog",
+        width: 1161,
+        height: 809,
+      },
+      {
+        type: "image",
+        src: "/images/synergy-4.webp",
+        alt: "Synergy token ecosystem",
+        width: 1181,
+        height: 797,
+      },
+      {
+        type: "image",
+        src: "/images/synergy-5.webp",
+        alt: "Synergy Alfa-Bank integration",
+        width: 1189,
+        height: 668,
+      },
     ],
   },
 ];

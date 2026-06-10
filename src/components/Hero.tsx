@@ -18,40 +18,46 @@ export function Hero() {
             <span className="hero-blob-2" />
             <span className="hero-blob-3" />
           </div>
-          <h1 className="relative z-20 max-w-[1080px] text-balance font-inter-tight text-3xl font-medium leading-[1.2] tracking-[-0.01em] text-white sm:text-4xl md:text-5xl lg:-mt-6 lg:text-5xl lg:leading-[1.2] xl:text-7xl xl:leading-[1.1]">
-            An{" "}
-            <Button
-              variant="status"
-              className="mx-1 inline-flex align-middle"
-              type="button"
-            >
-              <span className="relative flex h-2 w-2">
-                <span
-                  className={`absolute h-2 w-2 rounded-full opacity-75 status-ping ${siteConfig.available ? "bg-[#03F172]" : "bg-red-500"}`}
-                />
-                <span
-                  className={`relative h-2 w-2 rounded-full ${siteConfig.available ? "bg-[#03F172]" : "bg-red-500"}`}
-                />
-              </span>
-              {siteConfig.available ? "Available for work" : "Not available"}
-            </Button>{" "}
-            experienced Product Designer with a bias for shipping, quality and
-            measurable impact.{" "}
-            <a
-              href={siteConfig.telegram}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline"
-            >
+          <h1 className="relative z-20 max-w-[1080px] font-inter-tight text-3xl font-medium leading-[1.2] tracking-[-0.01em] text-white sm:text-4xl md:text-5xl lg:-mt-6 lg:text-5xl lg:leading-[1.2] xl:text-7xl xl:leading-[1.1]">
+            <span className="inline-flex flex-wrap items-center gap-x-2 gap-y-3">
+              <span>An</span>
               <Button
-                variant="white"
-                className="mx-1 inline-flex align-middle px-4"
-                showLetsTalkIcon
+                variant="status"
+                className="inline-flex shrink-0 align-middle"
+                type="button"
               >
-                Let&apos;s talk
+                <span className="relative flex h-2 w-2">
+                  <span
+                    className={`absolute h-2 w-2 rounded-full opacity-75 status-ping ${siteConfig.available ? "bg-[#03F172]" : "bg-red-500"}`}
+                  />
+                  <span
+                    className={`relative h-2 w-2 rounded-full ${siteConfig.available ? "bg-[#03F172]" : "bg-red-500"}`}
+                  />
+                </span>
+                {siteConfig.available ? "Available for work" : "Not available"}
               </Button>
-            </a>{" "}
-            about your product.
+              <span>
+                experienced Product Designer with a bias for shipping, quality and
+                measurable impact.
+              </span>
+              <span className="inline-flex items-center gap-x-2">
+                <a
+                  href={siteConfig.telegram}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex shrink-0"
+                >
+                  <Button
+                    variant="white"
+                    className="px-4"
+                    showLetsTalkIcon
+                  >
+                    Let&apos;s talk
+                  </Button>
+                </a>
+                <span>about your product.</span>
+              </span>
+            </span>
           </h1>
         </header>
       </div>
