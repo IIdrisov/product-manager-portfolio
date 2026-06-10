@@ -68,11 +68,6 @@ export function WorkSection() {
                     : "bg-gradient-to-t from-black/70 via-black/20 to-transparent",
                 )}
               >
-                {project.tag && (
-                  <span className="mb-3 w-fit rounded-full border-2 border-white/15 bg-primary px-3 py-1 text-sm text-white">
-                    {project.tag}
-                  </span>
-                )}
                 <h2 className="font-inter-tight text-2xl font-medium leading-tight text-white sm:text-3xl lg:text-4xl">
                   {project.title}
                 </h2>
