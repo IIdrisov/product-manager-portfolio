@@ -11,7 +11,7 @@ export function CaseStudyCta() {
         </span>
       )}
       <h2 className="max-w-3xl font-inter-tight text-4xl font-medium tracking-[-0.01em] md:text-6xl lg:text-7xl">
-        Let&apos;s design the next one together
+        Let&apos;s build the next one together
       </h2>
       <a href={siteConfig.telegram} target="_blank" rel="noopener noreferrer">
         <Button variant="primary" className="h-14 px-8 text-lg" showLetsTalkIcon>

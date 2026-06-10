@@ -121,14 +121,14 @@ export function ExperienceSection() {
       </ul>
 
       <p className="mt-8 text-center text-base text-secondary">
-        More details in my{" "}
+        More details on my{" "}
         <a
-          href={siteConfig.figma}
+          href={siteConfig.linkedin}
           target="_blank"
           rel="noopener noreferrer"
           className="underline underline-offset-4"
         >
-          Figma portfolio
+          LinkedIn profile
         </a>
         .
       </p>

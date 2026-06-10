@@ -22,34 +22,28 @@ export type CaseStudy = {
   media: CaseStudyMedia[];
 };
 
-const placeholderMedia = (count: number): CaseStudyMedia[] =>
-  Array.from({ length: count }, (_, i) => ({
-    type: i % 2 === 0 ? "video" : "image",
-    alt: `Media ${i + 1}`,
-  }));
-
 export const caseStudies: CaseStudy[] = [
   {
     slug: "xplace-crypto-card",
     category: "XPlace Neobank",
     title: "Crypto-backed credit card",
     description:
-      "Designing a crypto neobank with a Visa Platinum credit card backed by crypto assets.",
-    role: ["Product Designer", "Product Discovery"],
+      "Building a crypto neobank with a Visa Platinum credit card backed by crypto assets.",
+    role: ["Senior Product Manager", "Product Discovery"],
     team: "Crypto Neobank · Product Squad · 20 members",
     scope: [
-      "UX Research",
-      "UI Design",
-      "Prototyping",
       "Product Strategy",
-      "User Testing",
-      "Design Systems",
+      "Monetization",
+      "User Research",
+      "Unit Economics",
+      "Growth",
+      "Cross-functional Leadership",
     ],
     link: "https://x.place",
     problem:
       "Crypto-native users are forced to sell appreciating assets for fiat purchases — creating tax liabilities and reducing investment exposure. Traditional crypto cards lack differentiation due to market saturation.",
     solution:
-      "Conducted market and user research, built CJM and designed a crypto-backed credit card model: DeFi lending + card issuing + banking. End-to-end UX/UI — onboarding, asset linking, card management, subscription tiers and monetization touchpoints in Figma.",
+      "Conducted market and user research, identified a key pain point and initiated a product pivot from a crypto card exchange to a neobank credit card company. Built monetization architecture: subscription tiers, interchange, FX, origination and trading fees. Led cross-functional team of 20 through discovery, MVP delivery and growth.",
     result:
       "MVP in 3 months. Revenue from $0 to $300K+ MRR within 3 months after launch. LTV +300%. Organic promotion from Web3 influencers, including Anatoly Yakovenko (Solana).",
     media: [
@@ -88,22 +82,22 @@ export const caseStudies: CaseStudy[] = [
     category: "Alpha One Exchange",
     title: "Onboarding & first-trade insurance",
     description:
-      "Redesigning onboarding and pre-trade funnel for an intraday crypto exchange.",
-    role: ["Product Designer", "Growth Design"],
+      "Owning growth and monetization for an intraday crypto exchange across 5 blockchains.",
+    role: ["Senior Product Manager", "Growth"],
     team: "Crypto Exchange · Growth Squad · 15 members",
     scope: [
-      "UX Research",
-      "UI Design",
-      "Prototyping",
+      "Product Strategy",
+      "Growth",
       "A/B Testing",
-      "Growth Design",
-      "Metrics-Driven Design",
+      "Unit Economics",
+      "Monetization",
+      "Retention",
     ],
     link: "https://alpha-one.io",
     problem:
       "Most new users came through referrals but lacked trading experience — low activation and first-trade conversion (5.6%). Low trading frequency constrained volume growth.",
     solution:
-      "Redesigned onboarding and pre-trade funnel with beginner-friendly flows. Launched first-trade insurance (loss coverage up to $50). Built automated trading UX and improved order matching. A/B tests and iterations based on unit economics.",
+      "Built financial and unit-economic models to identify growth bottlenecks. Redesigned onboarding and launched first-trade insurance (loss coverage up to $50). Identified low trading frequency as the primary constraint and launched automated trading alongside order matching improvements. Optimized commission mechanics, referral incentives and trader rewards.",
     result:
       "Registration → First Trade conversion: 5.6% → 11.2% (+100%). Trading volume: $6M → $55M (+900%). Market share: 0.7% → 2.3%. Active traders: 10.5% → 24.5%. 7-day retention: 23% → 35%.",
     media: [
@@ -136,21 +130,20 @@ export const caseStudies: CaseStudy[] = [
     title: "HR social network mobile migration",
     description:
       "Migrating Yandex's internal employee social network to a native mobile app.",
-    role: ["Product Designer"],
+    role: ["Product Designer", "Product Discovery"],
     team: "HR Tech · Internal Social Network · 8 members",
     scope: [
-      "UX Research",
-      "UI Design",
-      "Prototyping",
-      "User Testing",
-      "Mobile Design",
-      "Design Systems",
+      "Product Discovery",
+      "User Research",
+      "Roadmap",
+      "Cross-functional Delivery",
+      "Mobile Product",
     ],
     link: "https://yandex.ru/jobs",
     problem:
-      "The web version of the internal HR platform didn't provide a sufficient mobile experience. Service navigation, news feed and profiles needed redesign for a native app.",
+      "The web version of the internal HR platform didn't provide a sufficient mobile experience. Service navigation, news feed and profiles needed a product rethink for a native app.",
     solution:
-      "Designed web-to-app migration into a WebView app. Redesigned information architecture and navigation. Optimized news feed: card layouts, comment threads, content discovery. Built Club Profile and User Profile. Integrations with Random Coffee, Birthdays, Employee Profiles.",
+      "Led web-to-app migration into a WebView app. Redefined information architecture and navigation. Optimized news feed for mobile engagement: card layouts, comment threads, content discovery. Built Club Profile and User Profile. Integrated Random Coffee, Birthdays and Employee Profiles into a unified mobile experience.",
     result:
       "Improved mobile performance and platform accessibility. Increased internal community engagement. Smoother cross-service workflows between HR services.",
     media: [
@@ -199,23 +192,23 @@ export const caseStudies: CaseStudy[] = [
     category: "Whales / TON",
     title: "Staking pools & non-custodial wallet",
     description:
-      "UX/UI for Web3 products in the TON ecosystem: staking, wallet, NFT, crypto card.",
-    role: ["Product Designer", "Web3 UX"],
+      "Product strategy and roadmap for Web3 products in the TON ecosystem: staking, wallet, crypto card.",
+    role: ["Product Manager", "Web3"],
     team: "TON Ecosystem · Web3 Squad · 10 members",
     scope: [
-      "Web3 UX",
-      "UI Design",
-      "Prototyping",
-      "Onboarding Design",
-      "Payment Flows",
+      "Product Strategy",
+      "Web3",
+      "Monetization",
+      "Payments",
+      "Regulatory Compliance",
     ],
     link: "https://tonwhales.com",
     problem:
-      "Complex blockchain scenarios (staking, cross-chain transfers, seed phrase backup) created a high barrier to entry. Staking users churned due to opaque economics and high gas costs.",
+      "Staking users churned due to opaque economics and high gas costs. Cross-chain transaction costs eroded user value. No real-world spending path from crypto balances.",
     solution:
-      "Designed 3 staking pools, non-custodial wallet Tonhub, NFT Whales500 gated access flows. Low-friction onboarding with security patterns. Liquid staking UX and gas optimization. Holders.io crypto card + Visa integration flows.",
+      "Identified retention challenges and launched a liquid staking pool with improved participation mechanics. Redesigned staking economics and incentive structures. Analyzed cross-chain costs and collaborated with engineering on gas optimization. Led Holders.io crypto card development and Visa integration. Implemented AML processes and operational back-office tooling.",
     result:
-      "TVL ~$100M. Wallet scaled to 60K MAU. Liquid staking retention +~20%. Transfer costs −30–50%. Real-world spending from crypto balances via Visa card.",
+      "TVL scaled from $50M to $100M. Wallet scaled to 60K MAU. Liquid staking retention +~20%. Transfer costs −30–50%. Real-world spending from crypto balances via Visa card.",
     media: [
       {
         type: "image",
@@ -241,54 +234,53 @@ export const caseStudies: CaseStudy[] = [
       },
     ],
   },
-  // {
-  //   slug: "berizaryad-map",
-  //   category: "Beri Zariad",
-  //   title: "Map clustering & rental funnel",
-  //   description:
-  //     "Optimizing map and rental funnel for a power bank sharing service.",
-  //   role: ["Product Designer"],
-  //   team: "Power Bank Rental · Product Squad · 6 members",
-  //   scope: [
-  //     "JTBD Research",
-  //     "UI Design",
-  //     "A/B Testing",
-  //     "Payment UX",
-  //     "Map Design",
-  //   ],
-  //   link: "https://berizaryad.ru",
-  //   problem:
-  //     "Users with critically low battery (<3%) couldn't find nearby stations on the map and abandoned the rental funnel. High mobile traffic consumption on the map made it worse.",
-  //   solution:
-  //     "Field research and JTBD interviews. Designed location clustering and map optimization logic. In-app feedback system. Payment UX for SBP and alternative providers. A/B and multivariate testing.",
-  //   result:
-  //     "Mobile traffic consumption −40%. Rental conversion +15% among low-battery users. Actionable feedback ×3. Transaction costs −25%.",
-  //   media: [
-  //     { type: "image", src: "/images/berizaryad.png", alt: "Beri Zariad" },
-  //     ...placeholderMedia(3),
-  //   ],
-  // },
+  {
+    slug: "berizaryad-map",
+    category: "Beri Zariad",
+    title: "Map clustering & rental funnel",
+    description:
+      "Optimizing map and rental funnel for a power bank sharing service.",
+    role: ["Product Manager"],
+    team: "Power Bank Rental · Product Squad · 6 members",
+    scope: [
+      "Product Discovery",
+      "JTBD Research",
+      "A/B Testing",
+      "Backlog Ownership",
+      "Unit Economics",
+    ],
+    link: "https://berizaryad.ru",
+    problem:
+      "Users with critically low battery couldn't find nearby stations on the map and abandoned the rental funnel. High mobile traffic consumption on the map made it worse.",
+    solution:
+      "Conducted field research and JTBD interviews. Initiated backlog reprioritization to fix the funnel bottleneck. Designed location clustering and map optimization logic. Implemented in-app feedback and rating system. Identified opportunity to improve unit economics through payment infrastructure optimization and led SBP integration.",
+    result:
+      "Mobile traffic consumption −40%. Rental conversion +15% among low-battery users. Actionable feedback ×3. Transaction costs −25%.",
+    media: [
+      { type: "image", src: "/images/berizaryad.png", alt: "Beri Zariad" },
+    ],
+  },
   {
     slug: "safesound-telegram",
     category: "SafeSound",
     title: "Telegram music streaming mini-app",
     description:
       "The first music streaming service natively integrated into Telegram.",
-    role: ["Product Designer / Founder"],
+    role: ["Founder", "Product Strategy"],
     team: "Telegram Mini App · 8 members",
     scope: [
       "Product Discovery",
-      "UI Design",
-      "Prototyping",
       "Go-to-Market",
+      "Product Strategy",
+      "Fundraising",
       "Viral Mechanics",
     ],
     problem:
       "No Telegram-native music streaming experience existed. Users had to switch between messenger and external music apps, losing conversation context.",
     solution:
-      "Validated hypothesis through MVP at Telegram Hackathon. End-to-end UX/UI mini-app: music player, catalog, search, playlists, sharing mechanics. Figma prototypes. Go-to-market and viral distribution inside Telegram.",
+      "Identified demand for a Telegram-native music streaming experience and validated the hypothesis through MVP at Telegram Hackathon. Led product strategy, development and go-to-market with a team of 8. Built viral distribution mechanics inside Telegram.",
     result:
-      "TOP-100 out of 3,000+ Telegram Hackathon projects. 100K+ MAU through organic distribution. Tier-1 investor interest, Seed round initiated.",
+      "TOP-100 out of 3,000+ Telegram Hackathon projects. 100K+ MAU through organic distribution. Presented at industry conferences, attracted Tier-1 investor interest and initiated Seed round discussions.",
     media: [
       {
         type: "image",
@@ -351,20 +343,19 @@ export const caseStudies: CaseStudy[] = [
     title: "Token-based loyalty ecosystem",
     description:
       "Loyalty program and referral ecosystem for an educational holding.",
-    role: ["Product Designer"],
+    role: ["Product Manager"],
     team: "Loyalty Program · Product Squad · 7 members",
     scope: [
-      "UX Research",
-      "UI Design",
       "Product Strategy",
-      "Fraud Prevention UX",
-      "Loyalty Design",
+      "Referral Programs",
+      "Fraud Prevention",
+      "Partnership Integration",
     ],
     link: "https://synergy.ru",
     problem:
       "Weak incentives in the referral program blocked organic student acquisition. Fraud in referral activity reduced trust. Loyalty program didn't scale to partner universities.",
     solution:
-      "Analyzed referral funnel. Designed token-based loyalty ecosystem: earning and spending rewards on tuition and partner products. Fraud prevention and verification UX. Alfa-Bank integration: student cards and cross-service loyalty.",
+      "Analyzed referral funnel performance and identified weak incentives as the primary barrier. Designed and launched a token-based loyalty ecosystem: earning and spending rewards on tuition and partner products. Built monitoring and verification processes for referral activity. Led Alfa-Bank integration for student banking cards.",
     result:
       "Referral conversion ×2. Fraud −50%. Program revenue: 120M → 540M ₽/year. Scaled to 5 partner universities.",
     media: [
